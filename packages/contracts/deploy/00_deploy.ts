@@ -6,7 +6,7 @@ import { DeployFunction } from "hardhat-deploy/types";
 //   writeEnvVariables,
 //   getConfig,
 // } from "@vlayer/sdk/config";
-//
+//pnpm
 // const { prover, verifier } = await deployVlayerContracts({
 //   proverSpec,
 //   verifierSpec,

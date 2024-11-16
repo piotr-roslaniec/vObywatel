@@ -1,1018 +1,6 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/vlayer-0.1.0-nightly-20241115-20d6f84/src/Proof.sol": {
-      "lastModificationDate": 1731737984298,
-      "contentHash": "08ceec8d04e0afc0b940aa0d9ca4965a",
-      "sourceName": "vlayer-0.1.0/Proof.sol",
-      "solcConfig": {
-        "version": "0.8.23",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 100000000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [
-        "./CallAssumptions.sol",
-        "./Seal.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.13"
-      ],
-      "artifacts": [
-        "ProofLib"
-      ]
-    },
-    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/@openzeppelin-contracts-5.0.1/utils/Strings.sol": {
-      "lastModificationDate": 1731737982814,
-      "contentHash": "ba57ff4ddf1d9cae9d2009792795b7f6",
-      "sourceName": "@openzeppelin-contracts-5.0.1/utils/Strings.sol",
-      "solcConfig": {
-        "version": "0.8.23",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 100000000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [
-        "./math/Math.sol",
-        "./math/SignedMath.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.20"
-      ],
-      "artifacts": [
-        "Strings"
-      ]
-    },
-    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/vlayer-0.1.0-nightly-20241115-20d6f84/src/Prover.sol": {
-      "lastModificationDate": 1731737984326,
-      "contentHash": "e7d3bf473bcb06df092eab62e5e8d55b",
-      "sourceName": "vlayer-0.1.0/Prover.sol",
-      "solcConfig": {
-        "version": "0.8.23",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 100000000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [
-        "./Proof.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.13"
-      ],
-      "artifacts": [
-        "ITraveler",
-        "Prover"
-      ]
-    },
-    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/vlayer-0.1.0-nightly-20241115-20d6f84/src/WebProof.sol": {
-      "lastModificationDate": 1731737984366,
-      "contentHash": "e2e02d5d6f29a1f4bff1b6f98fb62d0f",
-      "sourceName": "vlayer-0.1.0/WebProof.sol",
-      "solcConfig": {
-        "version": "0.8.23",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 100000000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [
-        "@openzeppelin-contracts-5.0.1/utils/Strings.sol",
-        "@openzeppelin-contracts-5.0.1/utils/Address.sol",
-        "./PrecompilesAddresses.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.13"
-      ],
-      "artifacts": [
-        "WebLib",
-        "WebProofLib"
-      ]
-    },
-    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/vlayer-0.1.0-nightly-20241115-20d6f84/src/CallAssumptions.sol": {
-      "lastModificationDate": 1731737984505,
-      "contentHash": "e459813b0770600820836d5d136bc246",
-      "sourceName": "vlayer-0.1.0/CallAssumptions.sol",
-      "solcConfig": {
-        "version": "0.8.23",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 100000000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.13"
-      ],
-      "artifacts": [
-        "CallAssumptionsLib"
-      ]
-    },
-    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/vlayer-0.1.0-nightly-20241115-20d6f84/src/Seal.sol": {
-      "lastModificationDate": 1731737984285,
-      "contentHash": "f3849c557126a5fd11b03e04e80815d3",
-      "sourceName": "vlayer-0.1.0/Seal.sol",
-      "solcConfig": {
-        "version": "0.8.23",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 100000000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.13"
-      ],
-      "artifacts": [
-        "SealLib"
-      ]
-    },
-    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/@openzeppelin-contracts-5.0.1/utils/math/Math.sol": {
-      "lastModificationDate": 1731737982505,
-      "contentHash": "718fa8ba0ff269c92e364c1429d9de57",
-      "sourceName": "@openzeppelin-contracts-5.0.1/utils/math/Math.sol",
-      "solcConfig": {
-        "version": "0.8.23",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 100000000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.20"
-      ],
-      "artifacts": [
-        "Math"
-      ]
-    },
-    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/@openzeppelin-contracts-5.0.1/utils/math/SignedMath.sol": {
-      "lastModificationDate": 1731737982533,
-      "contentHash": "b6c6bdc7aaca4fe5b680760a72e09d3e",
-      "sourceName": "@openzeppelin-contracts-5.0.1/utils/math/SignedMath.sol",
-      "solcConfig": {
-        "version": "0.8.23",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 100000000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.20"
-      ],
-      "artifacts": [
-        "SignedMath"
-      ]
-    },
-    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/vlayer-0.1.0-nightly-20241115-20d6f84/src/PrecompilesAddresses.sol": {
-      "lastModificationDate": 1731737984519,
-      "contentHash": "b84d91e0c9ebd8ebf2c67f817b6d40d5",
-      "sourceName": "vlayer-0.1.0/PrecompilesAddresses.sol",
-      "solcConfig": {
-        "version": "0.8.23",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 100000000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.13"
-      ],
-      "artifacts": [
-        "Precompiles"
-      ]
-    },
-    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/@openzeppelin-contracts-5.0.1/utils/Address.sol": {
-      "lastModificationDate": 1731737982769,
-      "contentHash": "79c699f80eb8a9b168cb34e37816f894",
-      "sourceName": "@openzeppelin-contracts-5.0.1/utils/Address.sol",
-      "solcConfig": {
-        "version": "0.8.23",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 100000000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.20"
-      ],
-      "artifacts": [
-        "Address"
-      ]
-    },
-    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/vlayer-0.1.0-nightly-20241115-20d6f84/src/Verifier.sol": {
-      "lastModificationDate": 1731737984353,
-      "contentHash": "c40499aaeb116b7a70809b81636d7d56",
-      "sourceName": "vlayer-0.1.0/Verifier.sol",
-      "solcConfig": {
-        "version": "0.8.23",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 100000000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [
-        "./Proof.sol",
-        "./proof_verifier/IProofVerifier.sol",
-        "./proof_verifier/ProofVerifierFactory.sol",
-        "./CallAssumptions.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.13"
-      ],
-      "artifacts": [
-        "Verifier"
-      ]
-    },
-    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/@openzeppelin-contracts-5.0.1/token/ERC721/ERC721.sol": {
-      "lastModificationDate": 1731737982067,
-      "contentHash": "1e64e2ad597dc5b2dae11346502baad4",
-      "sourceName": "@openzeppelin-contracts-5.0.1/token/ERC721/ERC721.sol",
-      "solcConfig": {
-        "version": "0.8.23",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 100000000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [
-        "./IERC721.sol",
-        "./IERC721Receiver.sol",
-        "./extensions/IERC721Metadata.sol",
-        "../../utils/Context.sol",
-        "../../utils/Strings.sol",
-        "../../utils/introspection/ERC165.sol",
-        "../../interfaces/draft-IERC6093.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.20"
-      ],
-      "artifacts": [
-        "ERC721"
-      ]
-    },
-    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/vlayer-0.1.0-nightly-20241115-20d6f84/src/proof_verifier/IProofVerifier.sol": {
-      "lastModificationDate": 1731737984421,
-      "contentHash": "fb248c6e4870f7e8c019115ecc748468",
-      "sourceName": "vlayer-0.1.0/proof_verifier/IProofVerifier.sol",
-      "solcConfig": {
-        "version": "0.8.23",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 100000000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [
-        "../Proof.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.13"
-      ],
-      "artifacts": [
-        "IProofVerifier"
-      ]
-    },
-    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/vlayer-0.1.0-nightly-20241115-20d6f84/src/proof_verifier/ProofVerifierFactory.sol": {
-      "lastModificationDate": 1731737984491,
-      "contentHash": "e7b260189d170885f2587be6d08f066e",
-      "sourceName": "vlayer-0.1.0/proof_verifier/ProofVerifierFactory.sol",
-      "solcConfig": {
-        "version": "0.8.23",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 100000000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [
-        "./ChainId.sol",
-        "./IProofVerifier.sol",
-        "./ProofVerifierRouter.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.13"
-      ],
-      "artifacts": [
-        "ProofVerifierFactory"
-      ]
-    },
-    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/vlayer-0.1.0-nightly-20241115-20d6f84/src/proof_verifier/ChainId.sol": {
-      "lastModificationDate": 1731737984408,
-      "contentHash": "ada9af0a90a6bc0098e47177069d54ce",
-      "sourceName": "vlayer-0.1.0/proof_verifier/ChainId.sol",
-      "solcConfig": {
-        "version": "0.8.23",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 100000000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.13"
-      ],
-      "artifacts": [
-        "ChainIdLibrary"
-      ]
-    },
-    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/vlayer-0.1.0-nightly-20241115-20d6f84/src/proof_verifier/ProofVerifierRouter.sol": {
-      "lastModificationDate": 1731737984462,
-      "contentHash": "09956b628a198b9a7bdd657aba7b3493",
-      "sourceName": "vlayer-0.1.0/proof_verifier/ProofVerifierRouter.sol",
-      "solcConfig": {
-        "version": "0.8.23",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 100000000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [
-        "../Proof.sol",
-        "../Seal.sol",
-        "./IProofVerifier.sol",
-        "./FakeProofVerifier.sol",
-        "./Groth16ProofVerifier.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.13"
-      ],
-      "artifacts": [
-        "ProofVerifierRouter"
-      ]
-    },
-    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/vlayer-0.1.0-nightly-20241115-20d6f84/src/proof_verifier/Groth16ProofVerifier.sol": {
-      "lastModificationDate": 1731737984477,
-      "contentHash": "dbe175c7b74513b45371cc351bdf8cd7",
-      "sourceName": "vlayer-0.1.0/proof_verifier/Groth16ProofVerifier.sol",
-      "solcConfig": {
-        "version": "0.8.23",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 100000000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [
-        "risc0-ethereum-1.0.0/src/groth16/RiscZeroGroth16Verifier.sol",
-        "./ProofVerifierBase.sol",
-        "../Seal.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.13"
-      ],
-      "artifacts": [
-        "Groth16ProofVerifier"
-      ]
-    },
-    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/vlayer-0.1.0-nightly-20241115-20d6f84/src/proof_verifier/FakeProofVerifier.sol": {
-      "lastModificationDate": 1731737984435,
-      "contentHash": "49ac9da3bc92234c2407ffe0787c75a8",
-      "sourceName": "vlayer-0.1.0/proof_verifier/FakeProofVerifier.sol",
-      "solcConfig": {
-        "version": "0.8.23",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 100000000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [
-        "risc0-ethereum-1.0.0/src/test/RiscZeroMockVerifier.sol",
-        "../Seal.sol",
-        "./ChainId.sol",
-        "./ProofVerifierBase.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.13"
-      ],
-      "artifacts": [
-        "FakeProofVerifier"
-      ]
-    },
-    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/vlayer-0.1.0-nightly-20241115-20d6f84/src/proof_verifier/ProofVerifierBase.sol": {
-      "lastModificationDate": 1731737984448,
-      "contentHash": "32ccc01358460f4473be8789e22fbbe7",
-      "sourceName": "vlayer-0.1.0/proof_verifier/ProofVerifierBase.sol",
-      "solcConfig": {
-        "version": "0.8.23",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 100000000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [
-        "risc0-ethereum-1.0.0/src/IRiscZeroVerifier.sol",
-        "../ImageID.sol",
-        "../Proof.sol",
-        "../Seal.sol",
-        "./IProofVerifier.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.13"
-      ],
-      "artifacts": [
-        "ProofVerifierBase"
-      ]
-    },
-    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/risc0-ethereum-1.0.0/src/groth16/RiscZeroGroth16Verifier.sol": {
-      "lastModificationDate": 1731737979284,
-      "contentHash": "09c82a8780182ccb149a17e1b6c3b85c",
-      "sourceName": "risc0-ethereum-1.0.0/src/groth16/RiscZeroGroth16Verifier.sol",
-      "solcConfig": {
-        "version": "0.8.23",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 100000000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [
-        "openzeppelin-contracts/utils/math/SafeCast.sol",
-        "./ControlID.sol",
-        "./Groth16Verifier.sol",
-        "../IRiscZeroVerifier.sol",
-        "../StructHash.sol",
-        "../Util.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.9"
-      ],
-      "artifacts": [
-        "RiscZeroGroth16Verifier"
-      ]
-    },
-    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/vlayer-0.1.0-nightly-20241115-20d6f84/src/ImageID.sol": {
-      "lastModificationDate": 1731737984339,
-      "contentHash": "58b3265aeb779d9d60845ffed0d9cda3",
-      "sourceName": "vlayer-0.1.0/ImageID.sol",
-      "solcConfig": {
-        "version": "0.8.23",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 100000000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.20"
-      ],
-      "artifacts": [
-        "ImageID"
-      ]
-    },
-    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/risc0-ethereum-1.0.0/src/IRiscZeroVerifier.sol": {
-      "lastModificationDate": 1731737979343,
-      "contentHash": "ba5f5bd15691b5604988602ad6512d1f",
-      "sourceName": "risc0-ethereum-1.0.0/src/IRiscZeroVerifier.sol",
-      "solcConfig": {
-        "version": "0.8.23",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 100000000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [
-        "./Util.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.9"
-      ],
-      "artifacts": [
-        "IRiscZeroVerifier",
-        "OutputLib",
-        "ReceiptClaimLib",
-        "SystemStateLib"
-      ]
-    },
     "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/risc0-ethereum-1.0.0/src/Util.sol": {
       "lastModificationDate": 1731737979299,
       "contentHash": "d3e6566026445c246d2dfe59b2a79ba1",
@@ -1054,56 +42,10 @@
       ],
       "artifacts": []
     },
-    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/risc0-ethereum-1.0.0/src/StructHash.sol": {
-      "lastModificationDate": 1731737979328,
-      "contentHash": "4304c186efde2cbeb34f2bc718e965b9",
-      "sourceName": "risc0-ethereum-1.0.0/src/StructHash.sol",
-      "solcConfig": {
-        "version": "0.8.23",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 100000000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [
-        "openzeppelin-contracts/utils/math/SafeCast.sol",
-        "./Util.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.9"
-      ],
-      "artifacts": [
-        "StructHash"
-      ]
-    },
-    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/risc0-ethereum-1.0.0/src/groth16/ControlID.sol": {
-      "lastModificationDate": 1731737979257,
-      "contentHash": "2b77669c20d2c8f8bbd40d9c7ae210f9",
-      "sourceName": "risc0-ethereum-1.0.0/src/groth16/ControlID.sol",
+    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/node_modules/.pnpm/@account-abstraction+contracts@0.7.0/node_modules/@account-abstraction/contracts/core/Helpers.sol": {
+      "lastModificationDate": 1731731763381,
+      "contentHash": "d9a3c7fc04ae5f3fc8011d8792e8cb18",
+      "sourceName": "@account-abstraction/contracts/core/Helpers.sol",
       "solcConfig": {
         "version": "0.8.23",
         "settings": {
@@ -1137,16 +79,14 @@
       },
       "imports": [],
       "versionPragmas": [
-        "^0.8.9"
+        "^0.8.23"
       ],
-      "artifacts": [
-        "ControlID"
-      ]
+      "artifacts": []
     },
-    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/risc0-ethereum-1.0.0/src/groth16/Groth16Verifier.sol": {
-      "lastModificationDate": 1731737979271,
-      "contentHash": "b3ab0839f5b67990fc132c0d19305fe3",
-      "sourceName": "risc0-ethereum-1.0.0/src/groth16/Groth16Verifier.sol",
+    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/node_modules/.pnpm/@account-abstraction+contracts@0.7.0/node_modules/@account-abstraction/contracts/interfaces/PackedUserOperation.sol": {
+      "lastModificationDate": 1731731763381,
+      "contentHash": "6cdfe05be923cdc6051633ff1614e956",
+      "sourceName": "@account-abstraction/contracts/interfaces/PackedUserOperation.sol",
       "solcConfig": {
         "version": "0.8.23",
         "settings": {
@@ -1180,411 +120,12 @@
       },
       "imports": [],
       "versionPragmas": [
-        ">=0.7.0 <0.9.0"
+        ">=0.7.5"
       ],
-      "artifacts": [
-        "Groth16Verifier"
-      ]
-    },
-    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/@openzeppelin-contracts-5.0.1/utils/math/SafeCast.sol": {
-      "lastModificationDate": 1731737982519,
-      "contentHash": "d72cdfaacd4b1b8e090b57f4b7200ddc",
-      "sourceName": "openzeppelin-contracts/utils/math/SafeCast.sol",
-      "solcConfig": {
-        "version": "0.8.23",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 100000000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.20"
-      ],
-      "artifacts": [
-        "SafeCast"
-      ]
-    },
-    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/risc0-ethereum-1.0.0/src/test/RiscZeroMockVerifier.sol": {
-      "lastModificationDate": 1731737979186,
-      "contentHash": "f1d7683c80f7e8b09bd660477b6d5f87",
-      "sourceName": "risc0-ethereum-1.0.0/src/test/RiscZeroMockVerifier.sol",
-      "solcConfig": {
-        "version": "0.8.23",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 100000000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [
-        "../IRiscZeroVerifier.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.20"
-      ],
-      "artifacts": [
-        "RiscZeroMockVerifier"
-      ]
-    },
-    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/@openzeppelin-contracts-5.0.1/utils/Context.sol": {
-      "lastModificationDate": 1731737982783,
-      "contentHash": "67bfbc07588eb8683b3fd8f6f909563e",
-      "sourceName": "@openzeppelin-contracts-5.0.1/utils/Context.sol",
-      "solcConfig": {
-        "version": "0.8.23",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 100000000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.20"
-      ],
-      "artifacts": [
-        "Context"
-      ]
-    },
-    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/@openzeppelin-contracts-5.0.1/interfaces/draft-IERC6093.sol": {
-      "lastModificationDate": 1731737983992,
-      "contentHash": "4aefc698f77ecbace7f401257dfe182d",
-      "sourceName": "@openzeppelin-contracts-5.0.1/interfaces/draft-IERC6093.sol",
-      "solcConfig": {
-        "version": "0.8.23",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 100000000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.20"
-      ],
-      "artifacts": [
-        "IERC1155Errors",
-        "IERC20Errors",
-        "IERC721Errors"
-      ]
-    },
-    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/@openzeppelin-contracts-5.0.1/token/ERC721/IERC721.sol": {
-      "lastModificationDate": 1731737982241,
-      "contentHash": "5df8fdb527e563085847cad29e3c5f2e",
-      "sourceName": "@openzeppelin-contracts-5.0.1/token/ERC721/IERC721.sol",
-      "solcConfig": {
-        "version": "0.8.23",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 100000000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [
-        "../../utils/introspection/IERC165.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.20"
-      ],
-      "artifacts": [
-        "IERC721"
-      ]
-    },
-    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/@openzeppelin-contracts-5.0.1/token/ERC721/IERC721Receiver.sol": {
-      "lastModificationDate": 1731737982255,
-      "contentHash": "fc8a9841f4bdd6329c26a00d5e75f4b3",
-      "sourceName": "@openzeppelin-contracts-5.0.1/token/ERC721/IERC721Receiver.sol",
-      "solcConfig": {
-        "version": "0.8.23",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 100000000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.20"
-      ],
-      "artifacts": [
-        "IERC721Receiver"
-      ]
-    },
-    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/@openzeppelin-contracts-5.0.1/utils/introspection/ERC165.sol": {
-      "lastModificationDate": 1731737982961,
-      "contentHash": "6a55c353946e471d9792965d06208295",
-      "sourceName": "@openzeppelin-contracts-5.0.1/utils/introspection/ERC165.sol",
-      "solcConfig": {
-        "version": "0.8.23",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 100000000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [
-        "./IERC165.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.20"
-      ],
-      "artifacts": [
-        "ERC165"
-      ]
-    },
-    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/@openzeppelin-contracts-5.0.1/token/ERC721/extensions/IERC721Metadata.sol": {
-      "lastModificationDate": 1731737982167,
-      "contentHash": "12c206f185cb951213799561fdcaa40d",
-      "sourceName": "@openzeppelin-contracts-5.0.1/token/ERC721/extensions/IERC721Metadata.sol",
-      "solcConfig": {
-        "version": "0.8.23",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 100000000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [
-        "../IERC721.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.20"
-      ],
-      "artifacts": [
-        "IERC721Metadata"
-      ]
-    },
-    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/@openzeppelin-contracts-5.0.1/utils/introspection/IERC165.sol": {
-      "lastModificationDate": 1731737982975,
-      "contentHash": "de0163561b417b800d01749cbbe2147e",
-      "sourceName": "@openzeppelin-contracts-5.0.1/utils/introspection/IERC165.sol",
-      "solcConfig": {
-        "version": "0.8.23",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 100000000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.20"
-      ],
-      "artifacts": [
-        "IERC165"
-      ]
+      "artifacts": []
     },
     "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/src/Counter.sol": {
-      "lastModificationDate": 1731740496248,
+      "lastModificationDate": 1731752996920,
       "contentHash": "ae6c800a2b4c57768024d6e9423d39e8",
       "sourceName": "src/Counter.sol",
       "solcConfig": {
@@ -1626,105 +167,9 @@
         "Counter"
       ]
     },
-    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/src/vlayer/WebProofProver.sol": {
-      "lastModificationDate": 1731740496248,
-      "contentHash": "ce253e128c34c1bfa06ae894ad9eedf8",
-      "sourceName": "src/vlayer/WebProofProver.sol",
-      "solcConfig": {
-        "version": "0.8.23",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 100000000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [
-        "@openzeppelin-contracts-5.0.1/utils/Strings.sol",
-        "vlayer-0.1.0/Proof.sol",
-        "vlayer-0.1.0/Prover.sol",
-        "vlayer-0.1.0/WebProof.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.13"
-      ],
-      "artifacts": [
-        "WebProofProver"
-      ]
-    },
-    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/src/vlayer/WebProofVerifier.sol": {
-      "lastModificationDate": 1731740496248,
-      "contentHash": "56d25185bf4a56d9c9308d39f6f4d47c",
-      "sourceName": "src/vlayer/WebProofVerifier.sol",
-      "solcConfig": {
-        "version": "0.8.23",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 100000000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [
-        "./WebProofProver.sol",
-        "vlayer-0.1.0/Proof.sol",
-        "vlayer-0.1.0/Verifier.sol",
-        "@openzeppelin-contracts-5.0.1/token/ERC721/ERC721.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.13"
-      ],
-      "artifacts": [
-        "WebProofVerifier"
-      ]
-    },
     "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/src/SimpleAccount.sol": {
-      "lastModificationDate": 1731742687113,
-      "contentHash": "6ac35a9d78125e8bfc155bcd9d8d0827",
+      "lastModificationDate": 1731762302520,
+      "contentHash": "85aa8fb442a9889f582e4d0b05157e1e",
       "sourceName": "src/SimpleAccount.sol",
       "solcConfig": {
         "version": "0.8.23",
@@ -1777,7 +222,7 @@
       ]
     },
     "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/src/WebProofProver.sol": {
-      "lastModificationDate": 1731742145273,
+      "lastModificationDate": 1731752996921,
       "contentHash": "54dd35c36e132fc050f3b6e5aa343695",
       "sourceName": "src/WebProofProver.sol",
       "solcConfig": {
@@ -1820,6 +265,100 @@
       "versionPragmas": [],
       "artifacts": [
         "WebProofProver"
+      ]
+    },
+    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/vlayer-0.1.0-nightly-20241115-20d6f84/src/Proof.sol": {
+      "lastModificationDate": 1731752996905,
+      "contentHash": "08ceec8d04e0afc0b940aa0d9ca4965a",
+      "sourceName": "vlayer-0.1.0/Proof.sol",
+      "solcConfig": {
+        "version": "0.8.23",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 100000000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./CallAssumptions.sol",
+        "./Seal.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "ProofLib"
+      ]
+    },
+    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/vlayer-0.1.0-nightly-20241115-20d6f84/src/Verifier.sol": {
+      "lastModificationDate": 1731752996906,
+      "contentHash": "c40499aaeb116b7a70809b81636d7d56",
+      "sourceName": "vlayer-0.1.0/Verifier.sol",
+      "solcConfig": {
+        "version": "0.8.23",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 100000000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./Proof.sol",
+        "./proof_verifier/IProofVerifier.sol",
+        "./proof_verifier/ProofVerifierFactory.sol",
+        "./CallAssumptions.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "Verifier"
       ]
     },
     "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/node_modules/.pnpm/@account-abstraction+contracts@0.7.0/node_modules/@account-abstraction/contracts/core/BaseAccount.sol": {
@@ -1869,10 +408,10 @@
         "BaseAccount"
       ]
     },
-    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/node_modules/.pnpm/@account-abstraction+contracts@0.7.0/node_modules/@account-abstraction/contracts/core/Helpers.sol": {
-      "lastModificationDate": 1731731763381,
-      "contentHash": "d9a3c7fc04ae5f3fc8011d8792e8cb18",
-      "sourceName": "@account-abstraction/contracts/core/Helpers.sol",
+    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/node_modules/.pnpm/@openzeppelin+contracts@5.1.0/node_modules/@openzeppelin/contracts/proxy/utils/UUPSUpgradeable.sol": {
+      "lastModificationDate": 1731731763365,
+      "contentHash": "8bb056283c18516ca760e5e9aa3bc952",
+      "sourceName": "@openzeppelin/contracts/proxy/utils/UUPSUpgradeable.sol",
       "solcConfig": {
         "version": "0.8.23",
         "settings": {
@@ -1904,11 +443,16 @@
           }
         }
       },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.23"
+      "imports": [
+        "../../interfaces/draft-IERC1822.sol",
+        "../ERC1967/ERC1967Utils.sol"
       ],
-      "artifacts": []
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "UUPSUpgradeable"
+      ]
     },
     "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/node_modules/.pnpm/@openzeppelin+contracts@5.1.0/node_modules/@openzeppelin/contracts/utils/cryptography/ECDSA.sol": {
       "lastModificationDate": 1731731763362,
@@ -1951,51 +495,6 @@
       ],
       "artifacts": [
         "ECDSA"
-      ]
-    },
-    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/node_modules/.pnpm/@openzeppelin+contracts@5.1.0/node_modules/@openzeppelin/contracts/utils/cryptography/MessageHashUtils.sol": {
-      "lastModificationDate": 1731731763365,
-      "contentHash": "86fd93657e4e27ff76c38699e9b9fcef",
-      "sourceName": "@openzeppelin/contracts/utils/cryptography/MessageHashUtils.sol",
-      "solcConfig": {
-        "version": "0.8.23",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 100000000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [
-        "../Strings.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.20"
-      ],
-      "artifacts": [
-        "MessageHashUtils"
       ]
     },
     "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/node_modules/.pnpm/@openzeppelin+contracts@5.1.0/node_modules/@openzeppelin/contracts/proxy/utils/Initializable.sol": {
@@ -2041,10 +540,10 @@
         "Initializable"
       ]
     },
-    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/node_modules/.pnpm/@openzeppelin+contracts@5.1.0/node_modules/@openzeppelin/contracts/proxy/utils/UUPSUpgradeable.sol": {
+    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/node_modules/.pnpm/@openzeppelin+contracts@5.1.0/node_modules/@openzeppelin/contracts/utils/cryptography/MessageHashUtils.sol": {
       "lastModificationDate": 1731731763365,
-      "contentHash": "8bb056283c18516ca760e5e9aa3bc952",
-      "sourceName": "@openzeppelin/contracts/proxy/utils/UUPSUpgradeable.sol",
+      "contentHash": "86fd93657e4e27ff76c38699e9b9fcef",
+      "sourceName": "@openzeppelin/contracts/utils/cryptography/MessageHashUtils.sol",
       "solcConfig": {
         "version": "0.8.23",
         "settings": {
@@ -2077,14 +576,13 @@
         }
       },
       "imports": [
-        "../../interfaces/draft-IERC1822.sol",
-        "../ERC1967/ERC1967Utils.sol"
+        "../Strings.sol"
       ],
       "versionPragmas": [
         "^0.8.20"
       ],
       "artifacts": [
-        "UUPSUpgradeable"
+        "MessageHashUtils"
       ]
     },
     "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/node_modules/.pnpm/@account-abstraction+contracts@0.7.0/node_modules/@account-abstraction/contracts/samples/callback/TokenCallbackHandler.sol": {
@@ -2134,6 +632,100 @@
         "TokenCallbackHandler"
       ]
     },
+    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/vlayer-0.1.0-nightly-20241115-20d6f84/src/WebProof.sol": {
+      "lastModificationDate": 1731752996906,
+      "contentHash": "e2e02d5d6f29a1f4bff1b6f98fb62d0f",
+      "sourceName": "vlayer-0.1.0/WebProof.sol",
+      "solcConfig": {
+        "version": "0.8.23",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 100000000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin-contracts-5.0.1/utils/Strings.sol",
+        "@openzeppelin-contracts-5.0.1/utils/Address.sol",
+        "./PrecompilesAddresses.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "WebLib",
+        "WebProofLib"
+      ]
+    },
+    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/vlayer-0.1.0-nightly-20241115-20d6f84/src/Prover.sol": {
+      "lastModificationDate": 1731752996905,
+      "contentHash": "e7d3bf473bcb06df092eab62e5e8d55b",
+      "sourceName": "vlayer-0.1.0/Prover.sol",
+      "solcConfig": {
+        "version": "0.8.23",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 100000000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./Proof.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "ITraveler",
+        "Prover"
+      ]
+    },
     "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/node_modules/.pnpm/@openzeppelin+contracts@5.1.0/node_modules/@openzeppelin/contracts/utils/Strings.sol": {
       "lastModificationDate": 1731731763365,
       "contentHash": "f4cc092958a3ddec1f4ed4103bfc54dd",
@@ -2178,6 +770,355 @@
       ],
       "artifacts": [
         "Strings"
+      ]
+    },
+    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/@openzeppelin-contracts-5.0.1/utils/Strings.sol": {
+      "lastModificationDate": 1731752996864,
+      "contentHash": "ba57ff4ddf1d9cae9d2009792795b7f6",
+      "sourceName": "@openzeppelin-contracts-5.0.1/utils/Strings.sol",
+      "solcConfig": {
+        "version": "0.8.23",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 100000000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./math/Math.sol",
+        "./math/SignedMath.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Strings"
+      ]
+    },
+    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/vlayer-0.1.0-nightly-20241115-20d6f84/src/PrecompilesAddresses.sol": {
+      "lastModificationDate": 1731752996905,
+      "contentHash": "b84d91e0c9ebd8ebf2c67f817b6d40d5",
+      "sourceName": "vlayer-0.1.0/PrecompilesAddresses.sol",
+      "solcConfig": {
+        "version": "0.8.23",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 100000000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "Precompiles"
+      ]
+    },
+    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/@openzeppelin-contracts-5.0.1/utils/Address.sol": {
+      "lastModificationDate": 1731752996862,
+      "contentHash": "79c699f80eb8a9b168cb34e37816f894",
+      "sourceName": "@openzeppelin-contracts-5.0.1/utils/Address.sol",
+      "solcConfig": {
+        "version": "0.8.23",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 100000000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Address"
+      ]
+    },
+    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/@openzeppelin-contracts-5.0.1/utils/math/Math.sol": {
+      "lastModificationDate": 1731752996866,
+      "contentHash": "718fa8ba0ff269c92e364c1429d9de57",
+      "sourceName": "@openzeppelin-contracts-5.0.1/utils/math/Math.sol",
+      "solcConfig": {
+        "version": "0.8.23",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 100000000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Math"
+      ]
+    },
+    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/@openzeppelin-contracts-5.0.1/utils/math/SignedMath.sol": {
+      "lastModificationDate": 1731752996867,
+      "contentHash": "b6c6bdc7aaca4fe5b680760a72e09d3e",
+      "sourceName": "@openzeppelin-contracts-5.0.1/utils/math/SignedMath.sol",
+      "solcConfig": {
+        "version": "0.8.23",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 100000000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "SignedMath"
+      ]
+    },
+    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/vlayer-0.1.0-nightly-20241115-20d6f84/src/CallAssumptions.sol": {
+      "lastModificationDate": 1731752996904,
+      "contentHash": "e459813b0770600820836d5d136bc246",
+      "sourceName": "vlayer-0.1.0/CallAssumptions.sol",
+      "solcConfig": {
+        "version": "0.8.23",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 100000000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "CallAssumptionsLib"
+      ]
+    },
+    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/vlayer-0.1.0-nightly-20241115-20d6f84/src/Seal.sol": {
+      "lastModificationDate": 1731752996905,
+      "contentHash": "f3849c557126a5fd11b03e04e80815d3",
+      "sourceName": "vlayer-0.1.0/Seal.sol",
+      "solcConfig": {
+        "version": "0.8.23",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 100000000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "SealLib"
+      ]
+    },
+    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/node_modules/.pnpm/@openzeppelin+contracts@5.1.0/node_modules/@openzeppelin/contracts/utils/math/SignedMath.sol": {
+      "lastModificationDate": 1731731763365,
+      "contentHash": "ae3528afb8bdb0a7dcfba5b115ee8074",
+      "sourceName": "@openzeppelin/contracts/utils/math/SignedMath.sol",
+      "solcConfig": {
+        "version": "0.8.23",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 100000000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./SafeCast.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "SignedMath"
       ]
     },
     "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/node_modules/.pnpm/@openzeppelin+contracts@5.1.0/node_modules/@openzeppelin/contracts/utils/math/Math.sol": {
@@ -2226,10 +1167,10 @@
         "Math"
       ]
     },
-    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/node_modules/.pnpm/@openzeppelin+contracts@5.1.0/node_modules/@openzeppelin/contracts/utils/math/SignedMath.sol": {
+    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/node_modules/.pnpm/@openzeppelin+contracts@5.1.0/node_modules/@openzeppelin/contracts/utils/math/SafeCast.sol": {
       "lastModificationDate": 1731731763365,
-      "contentHash": "ae3528afb8bdb0a7dcfba5b115ee8074",
-      "sourceName": "@openzeppelin/contracts/utils/math/SignedMath.sol",
+      "contentHash": "2adca1150f58fc6f3d1f0a0f22ee7cca",
+      "sourceName": "@openzeppelin/contracts/utils/math/SafeCast.sol",
       "solcConfig": {
         "version": "0.8.23",
         "settings": {
@@ -2261,14 +1202,12 @@
           }
         }
       },
-      "imports": [
-        "./SafeCast.sol"
-      ],
+      "imports": [],
       "versionPragmas": [
         "^0.8.20"
       ],
       "artifacts": [
-        "SignedMath"
+        "SafeCast"
       ]
     },
     "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/node_modules/.pnpm/@openzeppelin+contracts@5.1.0/node_modules/@openzeppelin/contracts/utils/Panic.sol": {
@@ -2314,10 +1253,611 @@
         "Panic"
       ]
     },
-    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/node_modules/.pnpm/@openzeppelin+contracts@5.1.0/node_modules/@openzeppelin/contracts/utils/math/SafeCast.sol": {
-      "lastModificationDate": 1731731763365,
-      "contentHash": "2adca1150f58fc6f3d1f0a0f22ee7cca",
-      "sourceName": "@openzeppelin/contracts/utils/math/SafeCast.sol",
+    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/vlayer-0.1.0-nightly-20241115-20d6f84/src/proof_verifier/IProofVerifier.sol": {
+      "lastModificationDate": 1731752996907,
+      "contentHash": "fb248c6e4870f7e8c019115ecc748468",
+      "sourceName": "vlayer-0.1.0/proof_verifier/IProofVerifier.sol",
+      "solcConfig": {
+        "version": "0.8.23",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 100000000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "../Proof.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "IProofVerifier"
+      ]
+    },
+    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/vlayer-0.1.0-nightly-20241115-20d6f84/src/proof_verifier/ProofVerifierFactory.sol": {
+      "lastModificationDate": 1731752996907,
+      "contentHash": "e7b260189d170885f2587be6d08f066e",
+      "sourceName": "vlayer-0.1.0/proof_verifier/ProofVerifierFactory.sol",
+      "solcConfig": {
+        "version": "0.8.23",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 100000000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./ChainId.sol",
+        "./IProofVerifier.sol",
+        "./ProofVerifierRouter.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "ProofVerifierFactory"
+      ]
+    },
+    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/vlayer-0.1.0-nightly-20241115-20d6f84/src/proof_verifier/ChainId.sol": {
+      "lastModificationDate": 1731752996906,
+      "contentHash": "ada9af0a90a6bc0098e47177069d54ce",
+      "sourceName": "vlayer-0.1.0/proof_verifier/ChainId.sol",
+      "solcConfig": {
+        "version": "0.8.23",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 100000000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "ChainIdLibrary"
+      ]
+    },
+    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/vlayer-0.1.0-nightly-20241115-20d6f84/src/proof_verifier/ProofVerifierRouter.sol": {
+      "lastModificationDate": 1731752996907,
+      "contentHash": "09956b628a198b9a7bdd657aba7b3493",
+      "sourceName": "vlayer-0.1.0/proof_verifier/ProofVerifierRouter.sol",
+      "solcConfig": {
+        "version": "0.8.23",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 100000000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "../Proof.sol",
+        "../Seal.sol",
+        "./IProofVerifier.sol",
+        "./FakeProofVerifier.sol",
+        "./Groth16ProofVerifier.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "ProofVerifierRouter"
+      ]
+    },
+    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/vlayer-0.1.0-nightly-20241115-20d6f84/src/proof_verifier/Groth16ProofVerifier.sol": {
+      "lastModificationDate": 1731752996906,
+      "contentHash": "dbe175c7b74513b45371cc351bdf8cd7",
+      "sourceName": "vlayer-0.1.0/proof_verifier/Groth16ProofVerifier.sol",
+      "solcConfig": {
+        "version": "0.8.23",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 100000000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "risc0-ethereum-1.0.0/src/groth16/RiscZeroGroth16Verifier.sol",
+        "./ProofVerifierBase.sol",
+        "../Seal.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "Groth16ProofVerifier"
+      ]
+    },
+    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/vlayer-0.1.0-nightly-20241115-20d6f84/src/proof_verifier/FakeProofVerifier.sol": {
+      "lastModificationDate": 1731752996906,
+      "contentHash": "49ac9da3bc92234c2407ffe0787c75a8",
+      "sourceName": "vlayer-0.1.0/proof_verifier/FakeProofVerifier.sol",
+      "solcConfig": {
+        "version": "0.8.23",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 100000000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "risc0-ethereum-1.0.0/src/test/RiscZeroMockVerifier.sol",
+        "../Seal.sol",
+        "./ChainId.sol",
+        "./ProofVerifierBase.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "FakeProofVerifier"
+      ]
+    },
+    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/vlayer-0.1.0-nightly-20241115-20d6f84/src/proof_verifier/ProofVerifierBase.sol": {
+      "lastModificationDate": 1731752996907,
+      "contentHash": "32ccc01358460f4473be8789e22fbbe7",
+      "sourceName": "vlayer-0.1.0/proof_verifier/ProofVerifierBase.sol",
+      "solcConfig": {
+        "version": "0.8.23",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 100000000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "risc0-ethereum-1.0.0/src/IRiscZeroVerifier.sol",
+        "../ImageID.sol",
+        "../Proof.sol",
+        "../Seal.sol",
+        "./IProofVerifier.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "ProofVerifierBase"
+      ]
+    },
+    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/risc0-ethereum-1.0.0/src/groth16/RiscZeroGroth16Verifier.sol": {
+      "lastModificationDate": 1731752996900,
+      "contentHash": "09c82a8780182ccb149a17e1b6c3b85c",
+      "sourceName": "risc0-ethereum-1.0.0/src/groth16/RiscZeroGroth16Verifier.sol",
+      "solcConfig": {
+        "version": "0.8.23",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 100000000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "openzeppelin-contracts/utils/math/SafeCast.sol",
+        "./ControlID.sol",
+        "./Groth16Verifier.sol",
+        "../IRiscZeroVerifier.sol",
+        "../StructHash.sol",
+        "../Util.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.9"
+      ],
+      "artifacts": [
+        "RiscZeroGroth16Verifier"
+      ]
+    },
+    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/vlayer-0.1.0-nightly-20241115-20d6f84/src/ImageID.sol": {
+      "lastModificationDate": 1731752996904,
+      "contentHash": "58b3265aeb779d9d60845ffed0d9cda3",
+      "sourceName": "vlayer-0.1.0/ImageID.sol",
+      "solcConfig": {
+        "version": "0.8.23",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 100000000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ImageID"
+      ]
+    },
+    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/risc0-ethereum-1.0.0/src/IRiscZeroVerifier.sol": {
+      "lastModificationDate": 1731752996897,
+      "contentHash": "ba5f5bd15691b5604988602ad6512d1f",
+      "sourceName": "risc0-ethereum-1.0.0/src/IRiscZeroVerifier.sol",
+      "solcConfig": {
+        "version": "0.8.23",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 100000000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./Util.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.9"
+      ],
+      "artifacts": [
+        "IRiscZeroVerifier",
+        "OutputLib",
+        "ReceiptClaimLib",
+        "SystemStateLib"
+      ]
+    },
+    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/risc0-ethereum-1.0.0/src/StructHash.sol": {
+      "lastModificationDate": 1731752996898,
+      "contentHash": "4304c186efde2cbeb34f2bc718e965b9",
+      "sourceName": "risc0-ethereum-1.0.0/src/StructHash.sol",
+      "solcConfig": {
+        "version": "0.8.23",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 100000000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "openzeppelin-contracts/utils/math/SafeCast.sol",
+        "./Util.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.9"
+      ],
+      "artifacts": [
+        "StructHash"
+      ]
+    },
+    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/risc0-ethereum-1.0.0/src/groth16/ControlID.sol": {
+      "lastModificationDate": 1731752996899,
+      "contentHash": "2b77669c20d2c8f8bbd40d9c7ae210f9",
+      "sourceName": "risc0-ethereum-1.0.0/src/groth16/ControlID.sol",
+      "solcConfig": {
+        "version": "0.8.23",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 100000000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.9"
+      ],
+      "artifacts": [
+        "ControlID"
+      ]
+    },
+    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/risc0-ethereum-1.0.0/src/groth16/Groth16Verifier.sol": {
+      "lastModificationDate": 1731752996899,
+      "contentHash": "b3ab0839f5b67990fc132c0d19305fe3",
+      "sourceName": "risc0-ethereum-1.0.0/src/groth16/Groth16Verifier.sol",
+      "solcConfig": {
+        "version": "0.8.23",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 100000000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.7.0 <0.9.0"
+      ],
+      "artifacts": [
+        "Groth16Verifier"
+      ]
+    },
+    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/@openzeppelin-contracts-5.0.1/utils/math/SafeCast.sol": {
+      "lastModificationDate": 1731752996867,
+      "contentHash": "d72cdfaacd4b1b8e090b57f4b7200ddc",
+      "sourceName": "openzeppelin-contracts/utils/math/SafeCast.sol",
       "solcConfig": {
         "version": "0.8.23",
         "settings": {
@@ -2355,6 +1895,51 @@
       ],
       "artifacts": [
         "SafeCast"
+      ]
+    },
+    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/risc0-ethereum-1.0.0/src/test/RiscZeroMockVerifier.sol": {
+      "lastModificationDate": 1731752996901,
+      "contentHash": "f1d7683c80f7e8b09bd660477b6d5f87",
+      "sourceName": "risc0-ethereum-1.0.0/src/test/RiscZeroMockVerifier.sol",
+      "solcConfig": {
+        "version": "0.8.23",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 100000000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "../IRiscZeroVerifier.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "RiscZeroMockVerifier"
       ]
     },
     "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/node_modules/.pnpm/@account-abstraction+contracts@0.7.0/node_modules/@account-abstraction/contracts/interfaces/IAccount.sol": {
@@ -2400,52 +1985,6 @@
       ],
       "artifacts": [
         "IAccount"
-      ]
-    },
-    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/node_modules/.pnpm/@account-abstraction+contracts@0.7.0/node_modules/@account-abstraction/contracts/core/UserOperationLib.sol": {
-      "lastModificationDate": 1731731763381,
-      "contentHash": "49e8ce45c96e09cb83ff7d1d2e72e448",
-      "sourceName": "@account-abstraction/contracts/core/UserOperationLib.sol",
-      "solcConfig": {
-        "version": "0.8.23",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 100000000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [
-        "../interfaces/PackedUserOperation.sol",
-        "./Helpers.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.23"
-      ],
-      "artifacts": [
-        "UserOperationLib"
       ]
     },
     "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/node_modules/.pnpm/@account-abstraction+contracts@0.7.0/node_modules/@account-abstraction/contracts/interfaces/IEntryPoint.sol": {
@@ -2496,51 +2035,10 @@
         "IEntryPoint"
       ]
     },
-    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/node_modules/.pnpm/@account-abstraction+contracts@0.7.0/node_modules/@account-abstraction/contracts/interfaces/PackedUserOperation.sol": {
+    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/node_modules/.pnpm/@account-abstraction+contracts@0.7.0/node_modules/@account-abstraction/contracts/core/UserOperationLib.sol": {
       "lastModificationDate": 1731731763381,
-      "contentHash": "6cdfe05be923cdc6051633ff1614e956",
-      "sourceName": "@account-abstraction/contracts/interfaces/PackedUserOperation.sol",
-      "solcConfig": {
-        "version": "0.8.23",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 100000000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        ">=0.7.5"
-      ],
-      "artifacts": []
-    },
-    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/node_modules/.pnpm/@account-abstraction+contracts@0.7.0/node_modules/@account-abstraction/contracts/interfaces/IAggregator.sol": {
-      "lastModificationDate": 1731731763381,
-      "contentHash": "ea70aa8db36795540523cebf73f66469",
-      "sourceName": "@account-abstraction/contracts/interfaces/IAggregator.sol",
+      "contentHash": "49e8ce45c96e09cb83ff7d1d2e72e448",
+      "sourceName": "@account-abstraction/contracts/core/UserOperationLib.sol",
       "solcConfig": {
         "version": "0.8.23",
         "settings": {
@@ -2573,13 +2071,14 @@
         }
       },
       "imports": [
-        "./PackedUserOperation.sol"
+        "../interfaces/PackedUserOperation.sol",
+        "./Helpers.sol"
       ],
       "versionPragmas": [
-        ">=0.7.5"
+        "^0.8.23"
       ],
       "artifacts": [
-        "IAggregator"
+        "UserOperationLib"
       ]
     },
     "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/node_modules/.pnpm/@account-abstraction+contracts@0.7.0/node_modules/@account-abstraction/contracts/interfaces/IStakeManager.sol": {
@@ -2666,6 +2165,51 @@
       ],
       "artifacts": [
         "INonceManager"
+      ]
+    },
+    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/node_modules/.pnpm/@account-abstraction+contracts@0.7.0/node_modules/@account-abstraction/contracts/interfaces/IAggregator.sol": {
+      "lastModificationDate": 1731731763381,
+      "contentHash": "ea70aa8db36795540523cebf73f66469",
+      "sourceName": "@account-abstraction/contracts/interfaces/IAggregator.sol",
+      "solcConfig": {
+        "version": "0.8.23",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 100000000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./PackedUserOperation.sol"
+      ],
+      "versionPragmas": [
+        ">=0.7.5"
+      ],
+      "artifacts": [
+        "IAggregator"
       ]
     },
     "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/node_modules/.pnpm/@openzeppelin+contracts@5.1.0/node_modules/@openzeppelin/contracts/interfaces/draft-IERC1822.sol": {
@@ -2759,49 +2303,6 @@
         "ERC1967Utils"
       ]
     },
-    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/node_modules/.pnpm/@openzeppelin+contracts@5.1.0/node_modules/@openzeppelin/contracts/interfaces/IERC1967.sol": {
-      "lastModificationDate": 1731731763364,
-      "contentHash": "4e17c826a54a8ee1a185449d4695d07d",
-      "sourceName": "@openzeppelin/contracts/interfaces/IERC1967.sol",
-      "solcConfig": {
-        "version": "0.8.23",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 100000000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.20"
-      ],
-      "artifacts": [
-        "IERC1967"
-      ]
-    },
     "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/node_modules/.pnpm/@openzeppelin+contracts@5.1.0/node_modules/@openzeppelin/contracts/utils/Address.sol": {
       "lastModificationDate": 1731731763362,
       "contentHash": "553fc9ae17d9c00fd1c301b760781e26",
@@ -2845,6 +2346,49 @@
       ],
       "artifacts": [
         "Address"
+      ]
+    },
+    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/node_modules/.pnpm/@openzeppelin+contracts@5.1.0/node_modules/@openzeppelin/contracts/interfaces/IERC1967.sol": {
+      "lastModificationDate": 1731731763364,
+      "contentHash": "4e17c826a54a8ee1a185449d4695d07d",
+      "sourceName": "@openzeppelin/contracts/interfaces/IERC1967.sol",
+      "solcConfig": {
+        "version": "0.8.23",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 100000000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC1967"
       ]
     },
     "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/node_modules/.pnpm/@openzeppelin+contracts@5.1.0/node_modules/@openzeppelin/contracts/utils/StorageSlot.sol": {
@@ -2976,92 +2520,6 @@
         "Errors"
       ]
     },
-    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/node_modules/.pnpm/@openzeppelin+contracts@5.1.0/node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
-      "lastModificationDate": 1731731763364,
-      "contentHash": "bf0119eb2a570f219729ff38b6cd1df8",
-      "sourceName": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
-      "solcConfig": {
-        "version": "0.8.23",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 100000000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.20"
-      ],
-      "artifacts": [
-        "IERC165"
-      ]
-    },
-    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/node_modules/.pnpm/@openzeppelin+contracts@5.1.0/node_modules/@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol": {
-      "lastModificationDate": 1731731763364,
-      "contentHash": "729ce0904eb533489ffcc3bfe91237d4",
-      "sourceName": "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol",
-      "solcConfig": {
-        "version": "0.8.23",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 100000000
-          },
-          "evmVersion": "paris",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.20"
-      ],
-      "artifacts": [
-        "IERC721Receiver"
-      ]
-    },
     "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/node_modules/.pnpm/@openzeppelin+contracts@5.1.0/node_modules/@openzeppelin/contracts/token/ERC1155/IERC1155Receiver.sol": {
       "lastModificationDate": 1731731763364,
       "contentHash": "a1c249dfb5f349be0b4fc85e635dfd59",
@@ -3107,9 +2565,95 @@
         "IERC1155Receiver"
       ]
     },
+    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/node_modules/.pnpm/@openzeppelin+contracts@5.1.0/node_modules/@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol": {
+      "lastModificationDate": 1731731763364,
+      "contentHash": "729ce0904eb533489ffcc3bfe91237d4",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol",
+      "solcConfig": {
+        "version": "0.8.23",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 100000000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC721Receiver"
+      ]
+    },
+    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/node_modules/.pnpm/@openzeppelin+contracts@5.1.0/node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+      "lastModificationDate": 1731731763364,
+      "contentHash": "bf0119eb2a570f219729ff38b6cd1df8",
+      "sourceName": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+      "solcConfig": {
+        "version": "0.8.23",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 100000000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC165"
+      ]
+    },
     "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/src/SimpleAccountFactory.sol": {
-      "lastModificationDate": 1731741003252,
-      "contentHash": "d29b7b73a660bdc26c824b4a3c53a0a8",
+      "lastModificationDate": 1731762292268,
+      "contentHash": "8747a1d345a11962567eeeb95e3de9bd",
       "sourceName": "src/SimpleAccountFactory.sol",
       "solcConfig": {
         "version": "0.8.23",
@@ -3286,6 +2830,462 @@
       ],
       "artifacts": [
         "Proxy"
+      ]
+    },
+    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/src/vlayer/WebProofVerifier.sol": {
+      "lastModificationDate": 1731752996921,
+      "contentHash": "56d25185bf4a56d9c9308d39f6f4d47c",
+      "sourceName": "src/vlayer/WebProofVerifier.sol",
+      "solcConfig": {
+        "version": "0.8.23",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 100000000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./WebProofProver.sol",
+        "vlayer-0.1.0/Proof.sol",
+        "vlayer-0.1.0/Verifier.sol",
+        "@openzeppelin-contracts-5.0.1/token/ERC721/ERC721.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "WebProofVerifier"
+      ]
+    },
+    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/src/vlayer/WebProofProver.sol": {
+      "lastModificationDate": 1731752996921,
+      "contentHash": "ce253e128c34c1bfa06ae894ad9eedf8",
+      "sourceName": "src/vlayer/WebProofProver.sol",
+      "solcConfig": {
+        "version": "0.8.23",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 100000000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin-contracts-5.0.1/utils/Strings.sol",
+        "vlayer-0.1.0/Proof.sol",
+        "vlayer-0.1.0/Prover.sol",
+        "vlayer-0.1.0/WebProof.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.13"
+      ],
+      "artifacts": [
+        "WebProofProver"
+      ]
+    },
+    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/@openzeppelin-contracts-5.0.1/token/ERC721/ERC721.sol": {
+      "lastModificationDate": 1731752996858,
+      "contentHash": "1e64e2ad597dc5b2dae11346502baad4",
+      "sourceName": "@openzeppelin-contracts-5.0.1/token/ERC721/ERC721.sol",
+      "solcConfig": {
+        "version": "0.8.23",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 100000000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./IERC721.sol",
+        "./IERC721Receiver.sol",
+        "./extensions/IERC721Metadata.sol",
+        "../../utils/Context.sol",
+        "../../utils/Strings.sol",
+        "../../utils/introspection/ERC165.sol",
+        "../../interfaces/draft-IERC6093.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ERC721"
+      ]
+    },
+    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/@openzeppelin-contracts-5.0.1/utils/Context.sol": {
+      "lastModificationDate": 1731752996862,
+      "contentHash": "67bfbc07588eb8683b3fd8f6f909563e",
+      "sourceName": "@openzeppelin-contracts-5.0.1/utils/Context.sol",
+      "solcConfig": {
+        "version": "0.8.23",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 100000000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Context"
+      ]
+    },
+    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/@openzeppelin-contracts-5.0.1/interfaces/draft-IERC6093.sol": {
+      "lastModificationDate": 1731752996847,
+      "contentHash": "4aefc698f77ecbace7f401257dfe182d",
+      "sourceName": "@openzeppelin-contracts-5.0.1/interfaces/draft-IERC6093.sol",
+      "solcConfig": {
+        "version": "0.8.23",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 100000000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC1155Errors",
+        "IERC20Errors",
+        "IERC721Errors"
+      ]
+    },
+    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/@openzeppelin-contracts-5.0.1/token/ERC721/IERC721.sol": {
+      "lastModificationDate": 1731752996858,
+      "contentHash": "5df8fdb527e563085847cad29e3c5f2e",
+      "sourceName": "@openzeppelin-contracts-5.0.1/token/ERC721/IERC721.sol",
+      "solcConfig": {
+        "version": "0.8.23",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 100000000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "../../utils/introspection/IERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC721"
+      ]
+    },
+    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/@openzeppelin-contracts-5.0.1/token/ERC721/IERC721Receiver.sol": {
+      "lastModificationDate": 1731752996858,
+      "contentHash": "fc8a9841f4bdd6329c26a00d5e75f4b3",
+      "sourceName": "@openzeppelin-contracts-5.0.1/token/ERC721/IERC721Receiver.sol",
+      "solcConfig": {
+        "version": "0.8.23",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 100000000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC721Receiver"
+      ]
+    },
+    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/@openzeppelin-contracts-5.0.1/utils/introspection/ERC165.sol": {
+      "lastModificationDate": 1731752996865,
+      "contentHash": "6a55c353946e471d9792965d06208295",
+      "sourceName": "@openzeppelin-contracts-5.0.1/utils/introspection/ERC165.sol",
+      "solcConfig": {
+        "version": "0.8.23",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 100000000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "./IERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ERC165"
+      ]
+    },
+    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/@openzeppelin-contracts-5.0.1/token/ERC721/extensions/IERC721Metadata.sol": {
+      "lastModificationDate": 1731752996860,
+      "contentHash": "12c206f185cb951213799561fdcaa40d",
+      "sourceName": "@openzeppelin-contracts-5.0.1/token/ERC721/extensions/IERC721Metadata.sol",
+      "solcConfig": {
+        "version": "0.8.23",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 100000000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "../IERC721.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC721Metadata"
+      ]
+    },
+    "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/dependencies/@openzeppelin-contracts-5.0.1/utils/introspection/IERC165.sol": {
+      "lastModificationDate": 1731752996866,
+      "contentHash": "de0163561b417b800d01749cbbe2147e",
+      "sourceName": "@openzeppelin-contracts-5.0.1/utils/introspection/IERC165.sol",
+      "solcConfig": {
+        "version": "0.8.23",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 100000000
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IERC165"
       ]
     }
   }

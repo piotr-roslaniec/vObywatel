@@ -33,7 +33,7 @@ contract SimpleAccountFactory {
             payable(
                 new ERC1967Proxy{salt: bytes32(0)}(
                     address(accountImplementation),
-                    abi.encodeCall(SimpleAccount.initialize, params)
+                    abi.encodeCall(SimpleAccount.initialize, (params))
                 )
             )
         );
