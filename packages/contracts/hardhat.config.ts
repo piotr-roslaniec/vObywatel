@@ -1,6 +1,7 @@
 import "@nomicfoundation/hardhat-toolbox";
+import "@nomicfoundation/hardhat-foundry";
 import "hardhat-deploy";
-import { HardhatUserConfig } from "hardhat/config";
+import {HardhatUserConfig} from "hardhat/config";
 import envConfig from "./envConfig";
 import "./shared/typed-hardhat-deploy";
 

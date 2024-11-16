@@ -13,6 +13,8 @@ import "@account-abstraction/contracts/core/BaseAccount.sol";
 import "@account-abstraction/contracts/core/Helpers.sol";
 import "@account-abstraction/contracts/samples/callback/TokenCallbackHandler.sol";
 
+import {WebProofProver} from "./WebProofProver.sol";
+
 /**
  * minimal account.
  *  this is sample minimal account.
@@ -49,14 +51,14 @@ contract SimpleAccount is
         govIdHash = params.govIdHash;
     }
 
-    // function setOwner(
-    //     WebProof calldata,
-    //     bytes32 govIdHash,
-    //     address newOwner
-    // ) public onlyVerified(proverAddress, Prover.prove.selector) {
-    //     require(govIdHash == params.govIdHash, "invalid govIdHash");
-    //     owner = newOwner;
-    // }
+     function setOwner(
+         WebProof calldata,
+         bytes32 govIdHash,
+         address newOwner
+     ) public onlyVerified(verifierAddress, WebProofVerifier.verify.selector) {
+         require(govIdHash == params.govIdHash, "invalid govIdHash");
+         owner = newOwner;
+     }
 
     /// implement template method of BaseAccount
     function _validateSignature(
