@@ -38,3 +38,4 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 packages/v-obywatel/next-env.d.ts
+webproof/fixtures/*
