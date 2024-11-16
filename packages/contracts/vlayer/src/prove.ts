@@ -1,7 +1,6 @@
 import webProofProver from "../../out/WebProofProver.sol/WebProofProver";
 
 import { foundry } from "viem/chains";
-import webProofFixture from "./fixtures";
 
 import {
   createVlayerClient,
@@ -71,10 +70,10 @@ export async function setupRequestProveButton(element: HTMLButtonElement) {
 export const setupVProverButton = (element: HTMLButtonElement) => {
   element.addEventListener("click", async () => {
     const notaryPubKey =
-        "-----BEGIN PUBLIC KEY-----\n" +
-        "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEBv36FI4ZFszJa0DQFJ3wWCXvVLFr\n" +
-        "cRzMG5kaTeHGoSzDu6cFqx3uEWYpFGo6C0EOUgf+mEgbktLrXocv5yHzKg==\n" +
-        "-----END PUBLIC KEY-----"
+      "-----BEGIN PUBLIC KEY-----\n" +
+      "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEBv36FI4ZFszJa0DQFJ3wWCXvVLFr\n" +
+      "cRzMG5kaTeHGoSzDu6cFqx3uEWYpFGo6C0EOUgf+mEgbktLrXocv5yHzKg==\n" +
+      "-----END PUBLIC KEY-----"
 
     const webProof = {
       tls_proof: context.webProof || webProofFixture,
