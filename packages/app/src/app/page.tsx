@@ -6,6 +6,8 @@ import { Loader2, User, Eye, EyeOff } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
 
+const logoAddress = "https://static.biznes.gov.pl/styleguide/v1.7.39/img/Godlo_Rzeczypospolitej_Polskiej@2x.png"
+
 export default function Component() {
   const [loginState, setLoginState] = useState<'initial' | 'loading' | 'logged-in'>('initial')
   const [showAddress, setShowAddress] = useState(false)
@@ -23,7 +25,7 @@ export default function Component() {
     return (
       <div className="flex min-h-screen flex-col items-center justify-center gap-8 p-4">
         <Image
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-GRFpcaxJmimA9DVp3VahKnsmVldLmv.png"
+          src={logoAddress}
           alt="Polish Coat of Arms"
           width={200}
           height={240}
@@ -42,7 +44,7 @@ export default function Component() {
       <div className="min-h-screen p-4">
         <header className="flex items-center justify-between">
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-GRFpcaxJmimA9DVp3VahKnsmVldLmv.png"
+            src={logoAddress}
             alt="Polish Coat of Arms"
             width={48}
             height={56}
@@ -81,7 +83,7 @@ export default function Component() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center gap-8 p-4">
       <Image
-        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-GRFpcaxJmimA9DVp3VahKnsmVldLmv.png"
+        src={logoAddress}
         alt="Polish Coat of Arms"
         width={200}
         height={240}
