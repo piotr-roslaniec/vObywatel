@@ -40,7 +40,7 @@ export const generateWebProof = async () => {
             address: process.env.NEXT_PUBLIC_PROVER_ADDRESS,
             // proverAbi: webProofProver.abi,
             proverAbi: "abi", // TODO use the real abi
-            chainId: foundry.id,
+            chainId: chain.id,
             functionName: "main",
             commitmentArgs: ["0x"],
         },
@@ -57,7 +57,7 @@ export const generateWebProof = async () => {
     });
 
     console.log("WebProof generated!", webProof);
-    generateProof(webProof)
+    await generateProof(webProof)
 }
 
 export const generateProof = async (providerWebProof: WebProof) => {
@@ -79,7 +79,7 @@ export const generateProof = async (providerWebProof: WebProof) => {
     const hash = await vlayer.prove({
         address: process.env.NEXT_PUBLIC_PROVER_ADDRESS,
         functionName: "main",
-        proverAbi: "abi", // webProofProver.abi,
+        proverAbi: webProofProver.abi,
         args: [
             {
                 webProofJson: JSON.stringify(webProof),
@@ -90,7 +90,7 @@ export const generateProof = async (providerWebProof: WebProof) => {
     });
     const provingResult = await vlayer.waitForProvingResult(hash);
     console.log("Proof generated!", provingResult);
-    createAccount(provingResult)
+    await createAccount(provingResult)
 };
 
 export const createAccount = async (provingResult: [Proof, string, Hex] | undefined) => {
