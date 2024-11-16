@@ -5,7 +5,7 @@ services:
     platform: linux/amd64
     ports:
       - "55688:80"
-    command: "80 www.mobywatel.gov.pl:443"
+    command: "80 konfigurator.biznes.gov.pl:443"
   notary-server:
     image: ghcr.io/tlsnotary/tlsn/notary-server:v0.1.0-alpha.5
     ports:

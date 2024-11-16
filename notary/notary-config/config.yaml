@@ -7,10 +7,8 @@ server:
     <ul>
     <li>git commit hash: <a href="https://github.com/tlsnotary/tlsn/commit/{git_commit_hash}">{git_commit_hash}</a></li>
     <li>git commit timestamp: {git_commit_timestamp}</li>
-    <li>max-sent-data: 1048576</li>
-    <li>max-recv-data: 1048576</li>
-    <li>max-transcript-size: 2097152</li>
     <li>git commit timestamp: {git_commit_timestamp}</li>
+    <li>Konfigurator biznes gov pl</li>
     <li>public key: <pre>{public_key}</pre></li>
     </ul>
     <a href="/healthcheck">health check</a> - <a href="/info">info</a><br/>

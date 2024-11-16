@@ -52,10 +52,10 @@ export async function setupRequestProveButton(element: HTMLButtonElement) {
       },
       logoUrl: "https://www.mobywatel.gov.pl/assets/img/godlo-RP.svg",
       steps: [
-        startPage("https://www.mobywatel.gov.pl/", "Go to mobywatel.gov.pl"),
-        expectUrl("https://www.mobywatel.gov.pl/", "Log in"),
+        startPage("https://konto.biznes.gov.pl/pl/moje-konto", "Go to gov.pl"),
+        expectUrl("https://konto.biznes.gov.pl/pl/moje-konto", "Log in"),
         notarize(
-          "https://www.mobywatel.gov.pl/auth/realms/EU2/account",
+          "https://konfigurator.biznes.gov.pl/api/v2/ceidg/my-business/",
           "GET",
           "Generate Proof of National ID",
         ),

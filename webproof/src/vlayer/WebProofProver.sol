@@ -13,7 +13,7 @@ contract WebProofProver is Prover {
     using WebLib for Web;
 
     string constant DATA_URL =
-        "https://www.mobywatel.gov.pl/auth/realms/EU2/account";
+        "https://konfigurator.biznes.gov.pl/api/v2/ceidg/my-business/";
 
     function main(
         WebProof calldata webProof,
