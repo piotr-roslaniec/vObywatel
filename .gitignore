@@ -39,3 +39,5 @@ yarn-error.log*
 *.tsbuildinfo
 packages/v-obywatel/next-env.d.ts
 webproof/fixtures/*
+tmp/mobywatel-request-headers tmp/mobywatel-response tmp/mobywatel-response-headers tmp/x-response
+.idea/*
