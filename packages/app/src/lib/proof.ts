@@ -30,7 +30,7 @@ const examplesTestPrivate_key = "0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5
 const twitterUserAddress = "0x13k3..."
 const account = "0xbc37f27ad26fcb393e181bbf76521c6916f56583db51d22347f620b773e9ed09"
 
-export const generateWebProof = async () => {
+export const generateWebProof = async (setWalletAddress: (address: string) => void) => {
     const provider = createExtensionWebProofProvider({
         wsProxyUrl: "ws://localhost:55688",
         notaryUrl: "http://localhost:7047",
@@ -89,6 +89,7 @@ export const generateProof = async (providerWebProof: WebProof) => {
     });
     const provingResult = await vlayer.waitForProvingResult(hash);
     console.log("Proof generated!", provingResult);
+
     await createAccount(provingResult)
 };
 

@@ -13,7 +13,7 @@ const logoAddress = "https://static.biznes.gov.pl/styleguide/v1.7.39/img/Godlo_R
 export default function Component() {
   const [loginState, setLoginState] = useState<'initial' | 'loading' | 'logged-in'>('initial')
   const [showAddress, setShowAddress] = useState(false)
-  const walletAddress = '0x13k3...'
+  const [walletAddress, setWalletAddress] = useState('')
 
   const handleLogin = () => {
     setLoginState('loading')
@@ -53,32 +53,26 @@ export default function Component() {
           />
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-2 rounded-lg border-2 border-[#4339F2] px-4 py-2">
-              <span className="text-[#4339F2]">{showAddress ? '0x13k3...f29d' : '0x13k3...'}</span>
-              <Button
-                variant="ghost"
-                size="sm"
-                className="text-[#4339F2]"
-                onClick={() => setShowAddress(!showAddress)}
-              >
-                {showAddress ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
-                <span className="ml-1">Show</span>
-              </Button>
-            </div>
-            <Button variant="ghost" size="icon" className="rounded-full">
-              <User className="h-5 w-5" />
-              <span className="sr-only">Profile</span>
+              <span className="text-[#4339F2]">{walletAddress}</span>
+              {showAddress ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+              <span className="ml-1">Show</span>
             </Button>
           </div>
-        </header>
-        <main className="flex flex-1 items-center justify-center pt-32">
-          <Button
-            className="bg-[#4339F2] px-8 py-6 text-lg hover:bg-[#4339F2]/90"
-            onClick={() => alert('Send ETH clicked')}
-          >
-            Send ETH
+          <Button variant="ghost" size="icon" className="rounded-full">
+            <User className="h-5 w-5" />
+            <span className="sr-only">Profile</span>
           </Button>
-        </main>
       </div>
+        </header >
+      <main className="flex flex-1 items-center justify-center pt-32">
+        <Button
+          className="bg-[#4339F2] px-8 py-6 text-lg hover:bg-[#4339F2]/90"
+          onClick={() => alert('Send ETH clicked')}
+        >
+          Send ETH
+        </Button>
+      </main>
+      </div >
     )
   }
 
@@ -93,7 +87,7 @@ export default function Component() {
       />
       <Button
         className="bg-[#4339F2] px-8 py-6 text-lg hover:bg-[#4339F2]/90"
-        onClick={() => generateWebProof()}
+        onClick={() => generateWebProof(setWalletAddress)}
       // onClick={() => main()}
       >
         Login with gov.pl
