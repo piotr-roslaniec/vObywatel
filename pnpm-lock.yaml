@@ -184,6 +184,8 @@ importers:
 
   packages/contracts/dependencies/forge-std-1.9.2: {}
 
+  packages/contracts/lib/forge-std: {}
+
 packages:
 
   '@account-abstraction/contracts@0.7.0':
