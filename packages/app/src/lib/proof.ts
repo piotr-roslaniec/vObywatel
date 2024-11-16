@@ -1,4 +1,4 @@
-// import webProofProver from "../../out/WebProofProver.sol/WebProofProver";
+import webProofProver from "../../../contracts/artifacts/src/WebProofProver.sol/WebProofProver.json"
 
 import { sepolia } from "viem/chains";
 // import webProofFixture from "./fixtures";
@@ -38,8 +38,7 @@ export const generateWebProof = async () => {
     const webProof = await provider.getWebProof({
         proverCallCommitment: {
             address: process.env.NEXT_PUBLIC_PROVER_ADDRESS,
-            // proverAbi: webProofProver.abi,
-            proverAbi: "abi", // TODO use the real abi
+            proverAbi: webProofProver.abi,
             chainId: chain.id,
             functionName: "main",
             commitmentArgs: ["0x"],
