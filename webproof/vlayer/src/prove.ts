@@ -38,7 +38,10 @@ const twitterUserAddress = account.address;
 
 export async function setupRequestProveButton(element: HTMLButtonElement) {
   element.addEventListener("click", async () => {
-    const provider = createExtensionWebProofProvider();
+    const provider = createExtensionWebProofProvider({
+      wsProxyUrl: "ws://localhost:55688",
+      notaryUrl: "http://localhost:7047",
+    });
     const webProof = await provider.getWebProof({
       proverCallCommitment: {
         address: import.meta.env.VITE_PROVER_ADDRESS,
