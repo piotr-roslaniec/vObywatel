@@ -1,6 +1,6 @@
 // import webProofProver from "../../out/WebProofProver.sol/WebProofProver";
 
-import { foundry } from "viem/chains";
+import { sepolia } from "viem/chains";
 // import webProofFixture from "./fixtures";
 
 import {
@@ -17,21 +17,18 @@ import {
     startPage,
 } from "@vlayer/sdk/web_proof";
 
-// import { createContext } from "@vlayer/sdk/config";
-
 // import webProofVerifier from "../../out/WebProofVerifier.sol/WebProofVerifier";
 import { Hex } from "viem";
 
 const chain = {
-    id: foundry.id,
+    id: sepolia.id,
 }
-const chainName = "anvil"
+const chainName = "sepolia"
 const proverUrl = "http://127.0.0.1:3000"
 const jsonRpcUrl = "http://127.0.0.1:8545"
 const examplesTestPrivate_key = "0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80"
 const twitterUserAddress = "0x13k3..."
-// const account = new Wallet(examplesTestPrivate_key).connect(new JsonRpcProvider(jsonRpcUrl))
-const account = "0x123"
+const account = "0xbc37f27ad26fcb393e181bbf76521c6916f56583db51d22347f620b773e9ed09"
 
 export const generateWebProof = async () => {
     const provider = createExtensionWebProofProvider({
@@ -71,7 +68,7 @@ export const generateProof = async (providerWebProof: WebProof) => {
         "-----END PUBLIC KEY-----"
 
     const webProof = {
-        tls_proof: providerWebProof, // || webProofFixture,
+        tls_proof: providerWebProof,
         notary_pub_key: notaryPubKey,
     };
     const vlayer = createVlayerClient({

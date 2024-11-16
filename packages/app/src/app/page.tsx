@@ -93,7 +93,7 @@ export default function Component() {
       <Button
         className="bg-[#4339F2] px-8 py-6 text-lg hover:bg-[#4339F2]/90"
         // onClick={() => generateWebProof()}
-        onClick={() => handleLogin()}
+        onClick={() => main()}
       >
         Login with gov.pl
       </Button>
