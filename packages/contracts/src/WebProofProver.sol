@@ -16,7 +16,7 @@ contract WebProofProver is Prover {
     view
     returns (Proof memory, string memory, address)
     {
-        Web memory web = webProof.verify(dataUrl);
+        Web memory web = webProof.recover(dataUrl);
 
         string memory screenName = web.jsonGetString("screen_name");
 

@@ -52,7 +52,6 @@ contract SimpleAccount is
         InitializeParams calldata params
     ) public virtual initializer {
         govIdHash = params.govIdHash;
-//        govIdHash = 0xe37a4b16d54bf5fec841cc8aef75e5b138f7410011a64d2e85b45204f6b52f8d;
     }
 
      function setOwner(

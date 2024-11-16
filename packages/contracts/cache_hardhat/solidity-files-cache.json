@@ -168,8 +168,8 @@
       ]
     },
     "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/src/SimpleAccount.sol": {
-      "lastModificationDate": 1731762302520,
-      "contentHash": "85aa8fb442a9889f582e4d0b05157e1e",
+      "lastModificationDate": 1731772473811,
+      "contentHash": "6ac35a9d78125e8bfc155bcd9d8d0827",
       "sourceName": "src/SimpleAccount.sol",
       "solcConfig": {
         "version": "0.8.23",
@@ -222,8 +222,8 @@
       ]
     },
     "/home/piotr/Documents/projects/hackathons/ethbangkok-2024/packages/contracts/src/WebProofProver.sol": {
-      "lastModificationDate": 1731752996921,
-      "contentHash": "54dd35c36e132fc050f3b6e5aa343695",
+      "lastModificationDate": 1731772574845,
+      "contentHash": "0d07bed7a5410040b74ed00ac95e4e09",
       "sourceName": "src/WebProofProver.sol",
       "solcConfig": {
         "version": "0.8.23",
