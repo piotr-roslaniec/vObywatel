@@ -12,8 +12,10 @@ import "@openzeppelin/contracts/proxy/utils/UUPSUpgradeable.sol";
 import "@account-abstraction/contracts/core/BaseAccount.sol";
 import "@account-abstraction/contracts/core/Helpers.sol";
 import "@account-abstraction/contracts/samples/callback/TokenCallbackHandler.sol";
-
+import {Proof} from "vlayer-0.1.0/Proof.sol";
+import {Verifier} from "vlayer-0.1.0/Verifier.sol";
 import {WebProofProver} from "./WebProofProver.sol";
+
 
 /**
  * minimal account.
@@ -25,10 +27,11 @@ contract SimpleAccount is
     BaseAccount,
     TokenCallbackHandler,
     UUPSUpgradeable,
-    Initializable
+    Initializable,
+    Verifier
 {
     IEntryPoint private immutable _entryPoint;
-    bytes32 public govIdHash;
+    bytes32 public  govIdHash;
     address public owner;
 
     constructor(IEntryPoint anEntryPoint) {
@@ -52,11 +55,11 @@ contract SimpleAccount is
     }
 
      function setOwner(
-         WebProof calldata,
-         bytes32 govIdHash,
+         Proof calldata,
+         bytes32 AGovIdHash,
          address newOwner
-     ) public onlyVerified(verifierAddress, WebProofVerifier.verify.selector) {
-         require(govIdHash == params.govIdHash, "invalid govIdHash");
+     ) public onlyVerified(newOwner, WebProofProver.main.selector) {
+         require(AGovIdHash == govIdHash, "invalid govIdHash");
          owner = newOwner;
      }
 
