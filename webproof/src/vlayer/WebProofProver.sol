@@ -19,9 +19,9 @@ contract WebProofProver is Prover {
         WebProof calldata webProof,
         address account
     ) public view returns (Proof memory, string memory, address) {
-        Web memory web = webProof.verify(DATA_URL);
+        Web memory web = webProof.recover(DATA_URL);
 
-        string memory screenName = web.jsonGetString("username");
+        string memory screenName = web.jsonGetString("nip");
 
         return (proof(), screenName, account);
     }
