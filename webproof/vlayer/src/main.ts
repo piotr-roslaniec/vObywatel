@@ -7,9 +7,9 @@ import {
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div class="container">
     <div class="logoContainer">
-      <img src="vlayer_logo.svg" />
+      <img src="https://www.mobywatel.gov.pl/assets/img/godlo-RP.svg" />
     </div>
-    <button id="prove">Request webproof of twitter account</button>
+    <button id="prove">Request webproof of your National ID</button>
     <button id="vprove" style="margin-top: 10px">Call vlayer prover</button>
     <button id="vverify" style="margin-top: 10px">Call vlayer verifier</button>
 

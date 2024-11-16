@@ -47,14 +47,14 @@ export async function setupRequestProveButton(element: HTMLButtonElement) {
         functionName: "main",
         commitmentArgs: ["0x"],
       },
-      logoUrl: "http://twitterswap.com/logo.png",
+      logoUrl: "https://www.mobywatel.gov.pl/assets/img/godlo-RP.svg",
       steps: [
-        startPage("https://x.com/i/flow/login", "Go to x.com login page"),
-        expectUrl("https://x.com/home", "Log in"),
+        startPage("https://www.mobywatel.gov.pl/", "Go to mobywatel.gov.pl"),
+        expectUrl("https://www.mobywatel.gov.pl/", "Log in"),
         notarize(
-          "https://api.x.com/1.1/account/settings.json",
+          "https://www.mobywatel.gov.pl/auth/realms/EU2/account",
           "GET",
-          "Generate Proof of Twitter profile",
+          "Generate Proof of National ID",
         ),
       ],
     });
