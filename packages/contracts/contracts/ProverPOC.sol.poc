@@ -1,5 +1,0 @@
-contract Prover {
-  function prove(WebProof calldata proof, bytes32 govIdHash, address owner) {
-    return (proof(), govIdHash, owner);
-  }
-}
