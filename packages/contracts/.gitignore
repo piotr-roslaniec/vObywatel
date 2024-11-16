@@ -1,3 +1,6 @@
+# Test fixtures (sensitive)
+fixtures
+
 # Hardhat files
 artifacts
 cache
