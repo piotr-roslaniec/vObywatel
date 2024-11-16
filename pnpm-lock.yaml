@@ -8,7 +8,7 @@ importers:
 
   .: {}
 
-  packages/v-obywatel:
+  packages/app:
     dependencies:
       next:
         specifier: 15.0.3
