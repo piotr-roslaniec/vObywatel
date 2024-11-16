@@ -12,6 +12,8 @@ import {
 } from "viem/account-abstraction";
 import {SimpleAccount__factory, SimpleAccountFactory__factory} from "./typechain-types";
 
+const factoryAddress = '0x735A9Df72E99f9367407FFE2Ce1F661a7Db5b0B0';
+
 export async function toProofSmartAccount(
     owner: Signer,
     govIdHash: string,
@@ -23,7 +25,6 @@ export async function toProofSmartAccount(
         (x) => x.selector,
     );
 
-    const factoryAddress = '0x735A9Df72E99f9367407FFE2Ce1F661a7Db5b0B0';
     // const factory = await ethers.getContractAt('SimpleAccountFactory', factoryAddress);
     const factory = SimpleAccountFactory__factory.connect(factoryAddress, owner);
     const factoryCalldata = SimpleAccountFactory__factory.createInterface().encodeFunctionData(
@@ -139,8 +140,10 @@ export async function toProofSmartAccount(
 }
 
 async function main() {
+    const factory = await ethers.getContractAt('SimpleAccountFactory', factoryAddress);
+
     // Load fixture data
-    const fixturePath = path.join(__dirname, './fixtures/twitter.json');
+    const fixturePath = path.join(__dirname, './fixtures/gov.json');
     const fixtureData = JSON.parse(fs.readFileSync(fixturePath, 'utf8'));
 
     // Generate a fake govIdHash using keccak256
