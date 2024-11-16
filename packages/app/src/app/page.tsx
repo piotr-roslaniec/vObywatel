@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { Loader2, User, Eye, EyeOff } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
+import { generateWebProof } from '@/lib/proof'
 
 const logoAddress = "https://static.biznes.gov.pl/styleguide/v1.7.39/img/Godlo_Rzeczypospolitej_Polskiej@2x.png"
 
@@ -91,7 +92,8 @@ export default function Component() {
       />
       <Button
         className="bg-[#4339F2] px-8 py-6 text-lg hover:bg-[#4339F2]/90"
-        onClick={handleLogin}
+        // onClick={() => generateWebProof()}
+        onClick={() => handleLogin()}
       >
         Login with gov.pl
       </Button>
