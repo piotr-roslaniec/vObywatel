@@ -1,35 +1,31 @@
-import {ethers} from 'ethers';
-import {keccak256, Signer, toUtf8Bytes} from 'ethers';
-import fs from 'fs';
-import path from 'path';
-import {Address, Hex, isAddressEqual, createPublicClient, SignableMessage, http, PublicClient} from "viem";
-
-import { createVlayerClient } from '@vlayer/sdk';
-
-import hardhatConfig from './hardhat.config';
 import {
-    entryPoint07Abi,
-    entryPoint07Address,
-    getUserOperationHash,
-    toSmartAccount,
-} from "viem/account-abstraction";
-import {SimpleAccount__factory, SimpleAccountFactory__factory} from "./typechain-types";
-import webProofProver from "./artifacts/src/WebProofProver.sol/WebProofProver.json";
+    keccak256,
+    createPublicClient,
+    http,
+    Address,
+    Hex,
+    isAddressEqual,
+    SignableMessage,
+    PublicClient
+} from 'viem';
+import {createVlayerClient} from '@vlayer/sdk';
+import {entryPoint07Abi, entryPoint07Address, getUserOperationHash, toSmartAccount} from 'viem/account-abstraction';
+import {SimpleAccount__factory, SimpleAccountFactory__factory} from '../../../contracts/typechain-types';
+import webProofProver from '../../../contracts/artifacts/src/WebProofProver.sol/WebProofProver.json';
+import fixtureData from  '../../../contracts/fixtures/gov.json';
 
 const factoryAddress = '0x735A9Df72E99f9367407FFE2Ce1F661a7Db5b0B0';
 
 export async function toProofSmartAccount(
-    owner: Signer,
+    owner: SignableMessage,
     govIdHash: string,
     client: PublicClient,
 ) {
-
     const accountIface = SimpleAccount__factory.createInterface();
     const unrestrictedSelectors = [accountIface.getFunction("setOwner")].map(
         (x) => x.selector,
     );
 
-    // const factory = await ethers.getContractAt('SimpleAccountFactory', factoryAddress);
     const factory = SimpleAccountFactory__factory.connect(factoryAddress, owner);
     const factoryCalldata = SimpleAccountFactory__factory.createInterface().encodeFunctionData(
         "createAccount",
@@ -43,8 +39,7 @@ export async function toProofSmartAccount(
     } as const;
 
     async function signMessage({message}: { message: SignableMessage }) {
-        const toSign =
-            typeof message === "string" ? message : ethers.getBytes(message.raw);
+        const toSign = typeof message === "string" ? message : message.raw;
         return (await owner.signMessage(toSign)) as Hex;
     }
 
@@ -65,9 +60,9 @@ export async function toProofSmartAccount(
         },
         async signTypedData(parameters) {
             return (await owner.signTypedData(
-                parameters.domain as any,
-                parameters.types as any,
-                parameters.message as any,
+                parameters.domain,
+                parameters.types,
+                parameters.message,
             )) as Hex;
         },
         async decodeCalls() {
@@ -123,7 +118,6 @@ export async function toProofSmartAccount(
         },
 
         userOperation: {
-            // TODO: is this needed?
             async estimateGas(userOperation) {
                 return {
                     preVerificationGas: BigInt(
@@ -143,16 +137,11 @@ export async function toProofSmartAccount(
     return account;
 }
 
-async function main() {
-    // Generate a fake govIdHash using keccak256
-    const govIdHash = keccak256(toUtf8Bytes('fakeGovId'));
-    console.log({govIdHash});
-
-    const fixturePath = path.join(__dirname, './fixtures/gov.json');
-    const fixtureData = fs.readFileSync(fixturePath, 'utf8');
+export async function main() {
+    const govIdHash = keccak256('fakeGovId');
 
     const vlayer = createVlayerClient({
-        url: "http://localhost:8080",
+        url: "http://localhost:7047",
     });
 
     console.log("Generating proof...");
@@ -166,19 +155,17 @@ async function main() {
             },
             govIdHash,
         ],
-        chainId:  hardhatConfig.networks?.sepolia?.chainId,
+        chainId: 11155111,
     });
     const provingResult = await vlayer.waitForProvingResult(hash);
 
-    const rpcUrl = hardhatConfig.networks?.sepolia?.url;
-    if (!rpcUrl) {
-        throw new Error('No RPC URL configured for the Sepolia network');
-    }
+    const INFURA_API_KEY = "d4b8aabed94f4b82b04be8a2a23f829f";
+    const rpcUrl = `https://sepolia.infura.io/v3/${INFURA_API_KEY}`;
     const client = createPublicClient({transport: http(rpcUrl)});
-    const signer = await ethers.provider.getSigner();
+    const signer = await client.getSigner();
     const account = await toProofSmartAccount(signer, govIdHash, client);
 
-    const accountAddress = account.address
+    const accountAddress = account.address;
     console.log({accountAddress});
 
     if (!accountAddress) {
@@ -188,48 +175,36 @@ async function main() {
     try {
         console.log('Account created at:', accountAddress);
 
-        // Get the created account contract instance
-        const SimpleAccount = await ethers.getContractAt('SimpleAccount', accountAddress);
+        const SimpleAccount = await client.getContractAt('SimpleAccount', accountAddress);
 
-        // Verify the web proof by calling the setOwner method
-        const setOwnerTx = await SimpleAccount.setOwner(provingResult, ethers.toUtf8Bytes(govIdHash), accountAddress);
+        const setOwnerTx = await SimpleAccount.setOwner(provingResult, toUtf8Bytes(govIdHash), accountAddress);
         await setOwnerTx.wait();
 
         console.log('Web proof verified and owner set');
 
-        // Perform a transaction with the created account
-        const [deployer] = await ethers.getSigners();
+        const [deployer] = await client.getSigners();
 
-        // Send ETH to the created account
         await deployer.sendTransaction({
             to: accountAddress,
-            value: ethers.parseEther('1.0'),
+            value: BigInt(1e18),
         });
 
         console.log('Sent 1 ETH to the account');
 
-        // Check the balance of the created account
-        const balance = await ethers.provider.getBalance(accountAddress);
-        console.log('Account balance:', ethers.formatEther(balance));
+        const balance = await client.getBalance(accountAddress);
+        console.log('Account balance:', balance);
 
-        // Send ETH from the created account to itself
         const tx2 = await account.sendTransaction({
             to: accountAddress,
-            value: ethers.parseEther('0.5'),
+            value: BigInt(0.5e18),
         });
         await tx2.wait();
 
         console.log('Sent 0.5 ETH from the account to itself');
 
-        // Check the balance again
-        const finalBalance = await ethers.provider.getBalance(accountAddress);
-        console.log('Final account balance:', ethers.formatEther(finalBalance));
+        const finalBalance = await client.getBalance(accountAddress);
+        console.log('Final account balance:', finalBalance);
     } catch (error) {
         console.error('Error:', error);
     }
 }
-
-main().catch(error => {
-    console.error(error);
-    process.exitCode = 1;
-});
