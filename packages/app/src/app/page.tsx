@@ -1,95 +1,98 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+'use client'
 
-export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
+import { useState } from 'react'
+import Image from 'next/image'
+import { Loader2, User, Eye, EyeOff } from 'lucide-react'
+
+import { Button } from '@/components/ui/button'
+
+export default function Component() {
+  const [loginState, setLoginState] = useState<'initial' | 'loading' | 'logged-in'>('initial')
+  const [showAddress, setShowAddress] = useState(false)
+  const walletAddress = '0x13k3...'
+
+  const handleLogin = () => {
+    setLoginState('loading')
+    // Simulate login delay
+    setTimeout(() => {
+      setLoginState('logged-in')
+    }, 2000)
+  }
+
+  if (loginState === 'loading') {
+    return (
+      <div className="flex min-h-screen flex-col items-center justify-center gap-8 p-4">
         <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
+          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-GRFpcaxJmimA9DVp3VahKnsmVldLmv.png"
+          alt="Polish Coat of Arms"
+          width={200}
+          height={240}
           priority
         />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+        <div className="flex items-center gap-2 rounded-lg border-2 border-[#4339F2] px-8 py-3 text-[#4339F2]">
+          <Loader2 className="h-4 w-4 animate-spin" />
+          <span>Signing in, please wait</span>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+      </div>
+    )
+  }
+
+  if (loginState === 'logged-in') {
+    return (
+      <div className="min-h-screen p-4">
+        <header className="flex items-center justify-between">
           <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-GRFpcaxJmimA9DVp3VahKnsmVldLmv.png"
+            alt="Polish Coat of Arms"
+            width={48}
+            height={56}
           />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2 rounded-lg border-2 border-[#4339F2] px-4 py-2">
+              <span className="text-[#4339F2]">{showAddress ? '0x13k3...f29d' : '0x13k3...'}</span>
+              <Button
+                variant="ghost"
+                size="sm"
+                className="text-[#4339F2]"
+                onClick={() => setShowAddress(!showAddress)}
+              >
+                {showAddress ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+                <span className="ml-1">Show</span>
+              </Button>
+            </div>
+            <Button variant="ghost" size="icon" className="rounded-full">
+              <User className="h-5 w-5" />
+              <span className="sr-only">Profile</span>
+            </Button>
+          </div>
+        </header>
+        <main className="flex flex-1 items-center justify-center pt-32">
+          <Button
+            className="bg-[#4339F2] px-8 py-6 text-lg hover:bg-[#4339F2]/90"
+            onClick={() => alert('Send ETH clicked')}
+          >
+            Send ETH
+          </Button>
+        </main>
+      </div>
+    )
+  }
+
+  return (
+    <div className="flex min-h-screen flex-col items-center justify-center gap-8 p-4">
+      <Image
+        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-GRFpcaxJmimA9DVp3VahKnsmVldLmv.png"
+        alt="Polish Coat of Arms"
+        width={200}
+        height={240}
+        priority
+      />
+      <Button
+        className="bg-[#4339F2] px-8 py-6 text-lg hover:bg-[#4339F2]/90"
+        onClick={handleLogin}
+      >
+        Login with gov.pl
+      </Button>
     </div>
-  );
+  )
 }
