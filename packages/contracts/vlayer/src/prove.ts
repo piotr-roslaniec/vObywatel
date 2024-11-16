@@ -1,6 +1,7 @@
 import webProofProver from "../../out/WebProofProver.sol/WebProofProver";
 
 import { foundry } from "viem/chains";
+import webProofFixture from "./fixtures";
 
 import {
   createVlayerClient,
@@ -76,7 +77,7 @@ export const setupVProverButton = (element: HTMLButtonElement) => {
         "-----END PUBLIC KEY-----"
 
     const webProof = {
-      tls_proof: context.webProof,
+      tls_proof: context.webProof || webProofFixture,
       notary_pub_key: notaryPubKey,
     };
     const vlayer = createVlayerClient({
@@ -104,13 +105,15 @@ export const setupVProverButton = (element: HTMLButtonElement) => {
 
 export const setupVerifyButton = (element: HTMLButtonElement) => {
   element.addEventListener("click", async () => {
-    isDefined(context.provingResult, "Proving result is undefined");
+    const provingResult = context.provingResult;
+
+    isDefined(provingResult, "Proving result is undefined");
 
     const txHash = await ethClient.writeContract({
       address: import.meta.env.VITE_VERIFIER_ADDRESS,
       abi: webProofVerifier.abi,
       functionName: "verify",
-      args: context.provingResult,
+      args: provingResult,
       chain,
       account: account,
     });
