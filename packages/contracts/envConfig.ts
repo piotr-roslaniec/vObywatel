@@ -7,6 +7,7 @@ import { zPrivateKey } from "./shared/utils";
  */
 const EnvConfigSchema = z.object({
   DEPLOYER_PRIVATE_KEY: zPrivateKey(),
+  INFURA_API_KEY: z.string(),
 });
 
 let envConfig: z.infer<typeof EnvConfigSchema>;
