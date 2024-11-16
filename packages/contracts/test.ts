@@ -12,7 +12,7 @@ import {
 } from "viem/account-abstraction";
 import {SimpleAccount__factory, SimpleAccountFactory__factory} from "./typechain-types";
 
-export async function toJwtSmartAccount(
+export async function toProofSmartAccount(
     owner: Signer,
     govIdHash: string,
     client: PublicClient,
@@ -144,8 +144,8 @@ async function main() {
     const fixtureData = JSON.parse(fs.readFileSync(fixturePath, 'utf8'));
 
     // Generate a fake govIdHash using keccak256
-    const fakeGovIdHash = keccak256(toUtf8Bytes('fakeGovId'));
-    console.log({fakeGovIdHash});
+    const govIdHash = keccak256(toUtf8Bytes('fakeGovId'));
+    console.log({fakeGovIdHash: govIdHash});
 
     const rpcUrl = hardhatConfig.networks?.sepolia?.url;
     if (!rpcUrl) {
@@ -153,66 +153,57 @@ async function main() {
     }
     const client = createPublicClient({transport: http(rpcUrl)});
     const signer = await ethers.provider.getSigner();
-    const account = await toJwtSmartAccount(signer, fakeGovIdHash, client);
-    console.log({account});
-    console.log({accountAddress: account.address});
+    const account = await toProofSmartAccount(signer, govIdHash, client);
 
-    // Use existing SimpleAccountFactory deployment on Sepolia
-    // const factoryAddress = '0x735A9Df72E99f9367407FFE2Ce1F661a7Db5b0B0';
-    // const SimpleAccountFactory = await ethers.getContractAt('SimpleAccountFactory', factoryAddress);
-    //
-    // try {
-    //     // Create account using the factory with a manual gas limit
-    //     const tx = await SimpleAccountFactory.createAccount({govIdHash: fakeGovIdHash}, {gasLimit: 2000000});
-    //     const receipt = await tx.wait();
-    //     console.log('Account creation transaction hash:', receipt.transactionHash);
-    //     const accountAddress = receipt.events?.find((event: any) => event.event === 'AccountCreated')?.args?.account;
-    //
-    //     if (!accountAddress) {
-    //         throw new Error('Account creation failed');
-    //     }
-    //
-    //     console.log('Account created at:', accountAddress);
-    //
-    //     // Get the created account contract instance
-    //     const account = await ethers.getContractAt('SimpleAccount', accountAddress);
-    //
-    //     // Verify the web proof by calling the setOwner method
-    //     const setOwnerTx = await account.setOwner(fixtureData.webProof, accountAddress);
-    //     await setOwnerTx.wait();
-    //
-    //     console.log('Web proof verified and owner set');
-    //
-    //     // Perform a transaction with the created account
-    //     const [deployer] = await ethers.getSigners();
-    //
-    //     // Send ETH to the created account
-    //     await deployer.sendTransaction({
-    //         to: accountAddress,
-    //         value: ethers.parseEther('1.0'),
-    //     });
-    //
-    //     console.log('Sent 1 ETH to the account');
-    //
-    //     // Check the balance of the created account
-    //     const balance = await ethers.provider.getBalance(accountAddress);
-    //     console.log('Account balance:', ethers.formatEther(balance));
-    //
-    //     // Send ETH from the created account to itself
-    //     const tx2 = await account.sendTransaction({
-    //         to: accountAddress,
-    //         value: ethers.parseEther('0.5'),
-    //     });
-    //     await tx2.wait();
-    //
-    //     console.log('Sent 0.5 ETH from the account to itself');
-    //
-    //     // Check the balance again
-    //     const finalBalance = await ethers.provider.getBalance(accountAddress);
-    //     console.log('Final account balance:', ethers.formatEther(finalBalance));
-    // } catch (error) {
-    //     console.error('Error:', error);
-    // }
+    const accountAddress = account.address
+    console.log({accountAddress});
+
+    if (!accountAddress) {
+        throw new Error('Account creation failed');
+    }
+
+    try {
+        console.log('Account created at:', accountAddress);
+
+        // Get the created account contract instance
+        const SimpleAccount = await ethers.getContractAt('SimpleAccount', accountAddress);
+
+        // Verify the web proof by calling the setOwner method
+        const setOwnerTx = await SimpleAccount.setOwner(fixtureData, ethers.toUtf8Bytes(govIdHash), accountAddress);
+        await setOwnerTx.wait();
+
+        console.log('Web proof verified and owner set');
+
+        // Perform a transaction with the created account
+        const [deployer] = await ethers.getSigners();
+
+        // Send ETH to the created account
+        await deployer.sendTransaction({
+            to: accountAddress,
+            value: ethers.parseEther('1.0'),
+        });
+
+        console.log('Sent 1 ETH to the account');
+
+        // Check the balance of the created account
+        const balance = await ethers.provider.getBalance(accountAddress);
+        console.log('Account balance:', ethers.formatEther(balance));
+
+        // Send ETH from the created account to itself
+        const tx2 = await account.sendTransaction({
+            to: accountAddress,
+            value: ethers.parseEther('0.5'),
+        });
+        await tx2.wait();
+
+        console.log('Sent 0.5 ETH from the account to itself');
+
+        // Check the balance again
+        const finalBalance = await ethers.provider.getBalance(accountAddress);
+        console.log('Final account balance:', ethers.formatEther(finalBalance));
+    } catch (error) {
+        console.error('Error:', error);
+    }
 }
 
 main().catch(error => {
