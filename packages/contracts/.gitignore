@@ -8,6 +8,7 @@ fixtures
 artifacts
 cache
 typechain-types
+cache_hardhat
 
 # Tests
 coverage
